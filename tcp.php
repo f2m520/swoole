@@ -11,7 +11,7 @@ $serv = new swoole_server($host, $port);
  * $fd 客户端
  */
 $serv->on('connect', function($serv, $fd){
-    echo '建立连接\n';
+    echo "建立连接\n";
 });
 
 /**
@@ -22,14 +22,15 @@ $serv->on('connect', function($serv, $fd){
  * $data 数据
  */
 $serv->on('receive', function($serv, $fd, $from_id, $data){
-    echo '接收信息\n';
+    echo "接收信息\n";
+    var_dump($data);
 });
 
 /**
  * 关闭连接
  */
 $serv->on('close', function($serv, $fd){
-    echo '关闭连接\n';
+    echo "关闭连接\n";
 });
 
 /**
