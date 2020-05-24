@@ -3,7 +3,7 @@
 /**
  * 创建server，类型为udp
  */
-$serv = new swoole_server("0.0.0.0", 9502, SWOOLE_PROCESS, SWOOLE_SOCK_UDP);
+$serv = new swoole_server("127.0.0.1", 9502, SWOOLE_PROCESS, SWOOLE_SOCK_UDP);
 
 /**
  * 监听接收事件
