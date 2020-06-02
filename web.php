@@ -9,7 +9,7 @@ $serv = new swoole_http_server("0.0.0.0", 9501);
  */
 $serv->on('request', function($request, $response){
     var_dump($request);
-    $response->header("Content-Type", "text/html; charset=utf-8");
+    $response->header("Content-Type", "text/view; charset=utf-8");
     $response->end("hello swoole ". rand(100, 999));
 });
 

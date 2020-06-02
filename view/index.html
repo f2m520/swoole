@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var webServer = "http://192.168.1.200:9501";
+    var webSocket = new WebSocket(webServer);
+
+    webSocket.onopen = function(evt){
+        console.log("链接成功");
+    }
+
+    webSocket.onmessage = function(evt){
+        console.log("关闭");
+    }
+
+    webSocket.onmessage = function(evt){
+        console.log("Retrieved data from server："+evt.data);
+    }
+
+    webSocket.onerror = function(evt, e){
+        console.log("Error occured："+evt.data);
+    }
+</script>
+</html>
